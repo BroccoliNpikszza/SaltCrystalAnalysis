@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Analysis - Salt Crystals</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Salt Crystal Image Analysis</h1>
+        
+        <img src="static/uploads/{{name}}" alt="Uploaded Image">
+        <h2>{{results[0]}}</h2>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Image Analysis. All rights reserved. Powered by AI and Machine Learning.</p>
+    </footer>
+
+</body>
+</html>
+
+

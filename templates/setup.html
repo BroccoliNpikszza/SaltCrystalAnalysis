@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h2>
+        Readme.txt
+    </h2>
+    <h4>
+        This program requires you to install ImageJ locally. It takes the image you upload, runs through 
+        ImageJ, gets the data in the form of CSV and predicts the type of crystal based on a model trained 
+        using Random Forest Classifer.
+    </h4>
+    <p>If you don't have ImageJ locally installed, click <a href="https://imagej.net/ij/download.html">here</a> to go to ImageJ official website.</p>
+    {% if error %}
+        <div style="color:red; font-weight:bold;">{{error}}</div>
+
+    {% endif %}
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label>Enter the file path of ij.jar</label>
+        <input type="text" id="ij_path" name="ij_path" required>
+        <button type="submit" value="Setup">Setup</button>
+        <h3>This path is for macro that runs ImageJ on your machine locally.</h3>
+    </form>
+    
+    
+</body>
+</html>

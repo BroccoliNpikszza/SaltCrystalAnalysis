@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Analysis - Salt Crystals</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Salt Crystal Image Analysis</h1>
+        <!-- <p>Upload images of salt crystals to identify them using an AI model. Our system can help you analyze the unique characteristics of different types of salt crystals!</p> -->
+
+        <h2>Upload Image</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required>
+            <input type="submit" value="Analyze">
+        </form>
+
+        <h2>Uploaded Images:</h2>
+        <table>
+            <tr>
+                {% for image in images %}
+                    <td>
+                        <img src="{{ url_for('static', filename='uploads/' ~ image) }}" alt="Uploaded Image">
+                    </td>
+                    {% if loop.index % 4 == 0 %} <!-- Change the number (4) to control the number of images per row -->
+                        </tr><tr>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+    <div class ="container">
+        <button><a href="/">Setup</a></button>
+    </div>
+
+    <footer>
+    </footer>
+
+</body>
+</html>
+
+
