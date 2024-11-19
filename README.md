@@ -12,5 +12,5 @@ python app.py
 
 | Requirement | Link |
 | ------ | ------ |
-|  ImageJ| [https://imagej.net/ij/download.html][PlGa] |
+|  ImageJ| [https://imagej.net/ij/download.html]|
 
