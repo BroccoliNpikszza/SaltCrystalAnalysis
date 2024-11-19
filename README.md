@@ -1,6 +1,20 @@
-# Salt Crystal Analysis
-#### Install imageJ locally to run this web-app.
-### Required packages:
-- Flask 3.1.0
-- Pandas
-- Scikit-learn
+# Salt Crystal Analysis 
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+## Installation
+
+Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+cd AnalyzeImage
+pip install flask pandas scikit-learn
+python app.py
+```
+## Requirements
+
+| Requirement | Link |
+| ------ | ------ |
+|  ImageJ| [https://imagej.net/ij/download.html][PlGa] |
+
