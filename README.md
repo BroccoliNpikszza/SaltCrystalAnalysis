@@ -1,10 +1,7 @@
 # Salt Crystal Analysis 
 
 ## Installation
-
-Dillinger requires [Node.js](https://nodejs.org/) v10+ to run.
-
-Install the dependencies and devDependencies and start the server.
+Requirement Python3.10.0 or higher, pip 24.3.1 or higher
 
 ```sh
 cd AnalyzeImage
